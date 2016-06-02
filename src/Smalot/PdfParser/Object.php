@@ -344,7 +344,9 @@ class Object
                         $x    = array_pop($args);
                         if ($current_position_tm['y'] !== false) {
                             $delta = abs(floatval($y) - floatval($current_position_tm['y']));
-                            if ($delta > 10) {
+                            if($delta == 0 ) {
+                                $text .= " ";
+                            }elseif ($delta > 10) {
                                 $text .= "\n";
                             }
                         }
